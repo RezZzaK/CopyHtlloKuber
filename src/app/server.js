@@ -10,7 +10,7 @@ const expressLogger = expressPino({ logger });
 
 const app = express();
 app.use(expressLogger);
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // Configuration
